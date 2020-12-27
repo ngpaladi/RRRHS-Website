@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    {% include navbar.html %}
+  <div class="container-fluid splash" style="background-image: url('{{ site.splash.background }}'); background-size: cover;">
+    <img id="splash-logo" src="{{ site.splash.logo }}" />
+    <h1>{{ site.splash.title }}</h1>
+    <h2>{{ site.splash.subtitle }}</h2>
+  </div>
+
+
+  {{ content }}
+
+
+
+  {% include footer.html %}
+</body>
+
+</html>

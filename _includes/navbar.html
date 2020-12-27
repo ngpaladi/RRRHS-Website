@@ -1,0 +1,20 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="/"> <img src="{{ site.navbar.logo }}" height="45" /> &nbsp {{ site.navbar.title }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto float-center text-center">
+
+                {% for item in site.data.navigation %}
+                <li class="nav-item {% if page.url == item.link %}active{% endif %}">
+                    <a class="nav-link" href="{{ item.link }}">{{item.name}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+</nav>

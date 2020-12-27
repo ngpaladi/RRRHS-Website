@@ -1,0 +1,20 @@
+<footer class="container-fluid">
+    <div class="row justify-content-around">
+        <div class="col-sm-2" style="padding-bottom: 40px">
+            <h2 style="padding-bottom: 10px">Contact</h2>
+            <h6>Got Questions?</h6>
+            <h6>Send us an email at:</h6>
+            <h6 class="email">{{site.email}}</h6>
+        </div>
+        <div class="col-sm-2" style="padding-bottom: 40px">
+            <h2 style="padding-bottom: 10px">Links</h2>
+            {% for item in site.data.navigation %}
+            <h6><a class="footer-link" href="{{ item.link }}">{{item.name}}</a></h6>
+            {% endfor %}
+        </div>
+
+    </div>
+    <p>&copy;
+        <script type="text/javascript"> document.write(new Date().getFullYear());</script> {{site.name}}. All rights
+        reserved.</p>
+</footer>
